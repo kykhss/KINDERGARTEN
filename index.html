@@ -641,7 +641,7 @@ document.getElementById('getResultBtn').style.display = 'block';
     </script>
 
     <script type="module">
-        import { db } from "/score/firebase-config.js";
+       import { db } from "./firebase-config.js";
         import { collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
 
         document.getElementById("searchBtn").addEventListener("click", async () => {
