@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KYHSS</title>
-
+    <title>
+        KYHSS</title>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;700&family=Noto+Sans+Malayalam:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -25,30 +26,6 @@
             margin: 0;
         }
 
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-        }
-
-        .arabic {
-            font-size: 30px;
-            margin-bottom: 0;
-            font-family: 'Reem Kufi', sans-serif;
-            font-weight: 100;
-        }
-
-        .malayalam {
-            font-size: 18px;
-            font-family: "Noto Sans Malayalam", sans-serif;
-        }
-
-        #campus {
-            font-size: 15px;
-        }
 
         input, select, button {
             width: 90%;
@@ -64,48 +41,6 @@
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: #218838;
-        }
-
-        .progress-card {
-            background: #f9f9f9;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: var(--shadow);
-            margin-top: 20px;
-        }
-        .progress-card p {
-            font-size: 14px;
-            color: #555;
-            text-align:left;
-        }
-
-        .progress-card table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        .progress-card th, .progress-card td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
-
-        .progress-card th {
-            background: #007bff;
-            color: white;
-        }
-
-        #progressCardContainer {
-            max-width: 20cm;
-            width: 100%;
-            padding: 5px;
-            font-size: 11px;
-            margin: auto;
-            display: none;
-        }
 
         .congratulations, .faild {
             padding: 10px;
@@ -180,19 +115,239 @@
             background: var(--primary-color);
         }
         
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .arabic { font-size: 20px; }
-            .malayalam { font-size: 14px; }
-            #campus { font-size: 10px; }
-            img { width: 100px; height: 100px; object-fit: fill; }
-            #progressCardContainer { font-size: 11px; }
-        }
-
+       
         @media print {
             .hidePrint { display: none; }
             #progressCardContainer { width: 100%; font-size: 14px; }
         }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        input, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+        
+        .progress-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        .progress-card h2 {
+            color: #333;
+        }
+
+        .progress-card p {
+            font-size: 14px;
+            color: #555;
+            text-align:left;
+        }
+
+        .progress-card table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .progress-card table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        .progress-card th, td {
+            padding: 8px;
+            text-align: center;
+        }
+
+        .progress-card th {
+            background: #007bff;
+            color: white;
+        }
+#progressCardContainer {
+display:flex;
+margin:auto;
+    width:20cm;
+        max-width:20cm;
+        max-height:26cm;
+        width: 100%;
+        padding: 5px;
+        font-size: 11px; /* Adjust font size for readability */
+        text-align:center;
+
+    }
+    
+    #progressard .faild{
+        background: #f5352b;
+            color: white;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            animation: fadeIn 1.5s ease-in-out;
+    }
+    #progressard .congratulations {
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @media screen and (max-width: 768px) {
+            #notification{
+                width: 95%;
+                margin: 0 auto;
+                background-color: antiquewhite;
+                height: 90vh;
+                overflow: auto;
+            }
+            #notification #closeNotification{
+                margin: auto;
+                    max-width: 30px;
+                    background-color: #f5352b;
+                    color: white;
+                    left: 90%;
+                    margin-top:0px;
+                    position:absolute;
+                    
+            }
+            img{
+                margin-bottom: 0px;
+                padding: 1px;
+                width: 100px;
+                height: 100px;
+                object-fit: fill;
+            }
+        container{
+        width:100%;
+        }
+        h2{
+        font-size:13px;
+        }
+        .arabic {
+            font-size: 20px;
+            margin-bottom: 0px;
+            font-family: 'Reem Kufi', sans-serif;
+            font-weight: 100;
+
+        }
+        .malayalam {
+        font-size:14px;
+                font-family: sans-serif;
+            }
+            #campus{
+            font-size:10px;
+            }
+    #progressCardContainer {
+    width:20cm;
+        max-width:20cm;
+        max-height:26cm;
+        width: 100%;
+        padding: 5px;
+        font-size: 11px; /* Adjust font size for readability */
+    }
+
+    .header {
+        text-align: center;
+        font-size: 11px;
+    }
+
+    .student-info {
+        display: block; /* Stack elements vertically */
+        text-align: center;
+    }
+
+    .table-container {
+        overflow-x: auto; /* Enable horizontal scrolling for tables */
+    }
+
+    table {
+        padding: 5px;
+        width: 100%;
+        font-size: 11px; /* Reduce table font size */
+    }
+
+    .button-container {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .download-btn {
+        width:fit-content;
+        padding: 12px;
+        font-size: 16px;
+    }
+    .congratulations {
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+}
+
+        @media print {
+        .hidePrint{
+        display:none;}
+    #progressCardContainer {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    #progressard .congratulations {
+            background: #28a745;
+            color: rgb(9, 5, 5);
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            animation:none;
+        }
+
+    table {
+        page-break-inside: auto;
+    }
+
+    tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+}
     </style>
 </head>
 <body>
@@ -437,9 +592,10 @@ document.getElementById('getResultBtn').style.display = 'block';
         }
 
         async function downloadPDF() {
-            const element = document.getElementById("printContents");
+            const element = await document.getElementById("printContents"); // Target the progress card container
             html2pdf().from(element).save("Progress_Card.pdf");
         }
+
 
         function printProgressCard() {
             const progressCardContainer = document.getElementById("progressCardContainer");
@@ -485,7 +641,7 @@ document.getElementById('getResultBtn').style.display = 'block';
     </script>
 
     <script type="module">
-        import { db } from "./firebase-config.js";
+        import { db } from "/score/firebase-config.js";
         import { collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
 
         document.getElementById("searchBtn").addEventListener("click", async () => {
